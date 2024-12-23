@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Bedoya</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="logo">Alejandro B.</a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#" class="active">Inicio</a>
+            <a href="#sobremi">Sobre mí</a>
+            <a href="#educacion">Educación</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Home section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Alejandro Bedoya</span></h1>
+            <div class="text-animate">
+                <h3>Software Development</h3>
+            </div>
+            <P>Welcome to my website, where I share my passion, experience and skills. <br> I am a 
+            person passionate about constant learning, sports and professional development.</P>
+
+            <div class="btn-box">
+                <a href="#" class="btn">Hire</a>
+                <a href="#" class="btn">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+            <a href="#"><i class='bx bxl-tiktok' ></i></a>
+        </div>
+
+        <div class="home-imgHover"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobremi">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <div class="about-img">
+            <img src="ABOUT ALEJO.jpg" alt="">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="about-content">
+            <h3>Software Development | Cybersecurity | Business Management | Social Networks</h3>
+            <p>I am passionate about technology, sports and continuous learning. 
+            My career covers various areas such as software development, cybersecurity, 
+            business management and social networks. Throughout my life, I have acquired 
+            a wide range of knowledge that allows me to address technological challenges 
+            from multiple perspectives. I love to constantly learn and improve, and I 
+            believe that teamwork and a positive attitude are keys to success in any project.</p>
+
+            <div class="btn-box btns">
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education" id="educacion">
+        <h2 class="heading">My <span>Viaje</span></h2>
+
+        <div class="education-row">
+            <div class="education-colum">
+                <h3 class="title">Educación</h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2015 - 2022</div>
+                            <h3>Bachiller</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid molestias natus nam itaque perspiciatis aliquam possimus 
+                            maxime dolorem iusto! Ratione.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2020 - 2022</div>
+                            <h3>Tecnico en Conservación de Recursos Naturales</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid molestias natus nam itaque perspiciatis aliquam possimus 
+                            maxime dolorem iusto! Ratione.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2020 - 2021</div>
+                            <h3>Programación de Software</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid molestias natus nam itaque perspiciatis aliquam possimus 
+                            maxime dolorem iusto! Ratione.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-colum">
+                <h3 class="title">Experiencia</h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2015 - 2022</div>
+                            <h3>Web Developer - Company</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid molestias natus nam itaque perspiciatis aliquam possimus 
+                            maxime dolorem iusto! Ratione.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2020 - 2022</div>
+                            <h3>Web Developer - Company</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Aliquid molestias natus nam itaque perspiciatis aliquam possimus 
+                            maxime dolorem iusto! Ratione.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="skills" id="habilidades">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>CSS <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>JavaScript <span>65%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Python <span>75%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Web Desing <span>95%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Web Development <span>67%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Graphic Desing <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>SEO Marketing <span>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text"placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text"placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number"placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text"placeholder="Email Subjet" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box" btns>
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Codehal | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt' ></i></a>
+        </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
