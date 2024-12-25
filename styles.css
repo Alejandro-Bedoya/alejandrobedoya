@@ -620,6 +620,25 @@ span {
     cursor: pointer;
 }
 
+.contact form .checkbox-field {
+    text-align: left;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.contact form .checkbox-field label a {
+    color: inherit; /* Usa el color del texto del contenedor */
+    text-decoration: none; /* Elimina la línea subrayada */
+    font-weight: bold; /* Opcional: Hace el texto más destacado */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+}
+
+.contact form .checkbox-field label a:hover {
+    color: var(--main-color); /* Cambia el color al pasar el cursor (opcional) */
+    text-decoration: underline; /* Muestra un subrayado solo al pasar el cursor (opcional) */
+}
+
 /*-- FOOTER --*/
 .footer {
     display: flex;

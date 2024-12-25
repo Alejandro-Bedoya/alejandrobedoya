@@ -39,6 +39,13 @@ window.onscroll = () => {
 
 // FORMULARIO WHATSAPP
 function sendToWhatsApp() {
+    // Validar que el usuario haya aceptado las políticas
+    const acceptPolicies = document.getElementById("accept_policies").checked;
+    if (!acceptPolicies) {
+        alert("Por favor, acepta las políticas de cookies y privacidad antes de enviar el formulario.");
+        return;
+    }
+
     // Obtener valores del formulario
     const name = document.getElementById("full_name").value;
     const email = document.getElementById("email").value;
