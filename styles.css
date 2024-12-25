@@ -632,9 +632,58 @@ span {
 
 .footer-text p {
     font-size: 1.6rem;
+    color: var(--text-color);
 }
 
-.footer-iconTop a{
+/* Estilo para los enlaces de políticas en vertical */
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Apilado verticalmente */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    font-size: 1.8rem; /* Tamaño más grande */
+    color: var(--text-color); /* Color blanco */
+    text-decoration: none; /* Quitar subrayado */
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--main-color); /* Cambiar a color principal al pasar el mouse */
+}
+
+/* Estilo para el selector de idioma */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.language-label {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+#language {
+    padding: 0.4rem 0.6rem;
+    font-size: 1.4rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+    border-radius: 0.4rem;
+    transition: background 0.3s;
+}
+
+#language:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* Estilo original del ícono "subir arriba" */
+.footer-iconTop a {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -674,138 +723,106 @@ span {
 }
 
 /* BREAKPOINTS */
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
-    body {
-        padding: 0 5%;
-    }
-    .container {
-        padding: 2rem 0;
-    }
-}
-
-/* Tablet adjustments */
+/*-- MODO RESPONSIVE --*/
 @media (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }
-    body {
-        padding: 0 3%;
+    .header {
+        padding: 1rem 5%;
     }
 
-    /* Header adjustments */
-    .header {
-        padding: 1rem 3%;
+    .content {
+        padding: 2rem 5%;
+        margin-top: 8rem;
     }
-    .logo {
+
+    .content h1 {
+        font-size: 2.4rem;
+    }
+
+    .content p, .content ul li {
+        font-size: 1.4rem;
+    }
+
+    .content h2 {
         font-size: 2rem;
     }
-    .navbar a {
-        font-size: 1.4rem;
-        margin-left: 1rem;
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2rem 5%;
     }
+
+    .footer-text p {
+        font-size: 1.4rem;
+    }
+
+    .footer-links a {
+        font-size: 1.6rem;
+        margin: 0.5rem 0;
+    }
+
+    .footer-iconTop {
+        align-self: center;
+        margin-top: 1rem;
+    }
+
     #menu-icon {
         display: block;
     }
+
     .navbar {
         display: none;
-        flex-direction: column;
-        background: var(--bg-color);
         position: absolute;
         top: 100%;
-        left: 0;
+        right: 0;
+        background: var(--scond-bg-color);
         width: 100%;
-        padding: 2rem 0;
-        z-index: 999;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
     }
+
     .navbar.active {
         display: flex;
     }
 
-    /* Section adjustments */
-    section {
-        padding: 2rem 0;
-    }
-    .section-title {
-        font-size: 2.4rem;
-        margin-bottom: 1.5rem;
-    }
-    .section-content {
-        font-size: 1.4rem;
-        text-align: center;
-    }
-    .btn {
+    .navbar a {
         font-size: 1.6rem;
-        padding: 1rem 2rem;
-    }
-
-    /* Image adjustments */
-    .img-responsive {
-        width: 100%;
-        height: auto;
         margin: 1rem 0;
-    }
-    .home-imgHover {
-        width: 35rem;
-        height: auto;
-    }
-
-    /* Layout adjustments */
-    .row {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .column {
-        flex: 1 1 100%;
     }
 }
 
-/* Mobile adjustments */
 @media (max-width: 480px) {
-    html {
-        font-size: 45%;
-    }
-
-    /* Header adjustments */
     .header {
-        padding: 1rem 2%;
-    }
-    .logo {
-        font-size: 1.8rem;
-    }
-    .navbar a {
-        font-size: 1.2rem;
+        padding: 0.5rem 3%;
     }
 
-    /* Section adjustments */
-    section {
-        padding: 1.5rem 0;
+    .content {
+        padding: 1rem 3%;
     }
-    .section-title {
+
+    .content h1 {
         font-size: 2rem;
     }
-    .section-content {
+
+    .content p, .content ul li {
         font-size: 1.2rem;
     }
-    .btn {
+
+    .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-text p {
+        font-size: 1.2rem;
+    }
+
+    .footer-links a {
         font-size: 1.4rem;
-        padding: 0.8rem 1.5rem;
     }
 
-    /* Image adjustments */
-    .home-imgHover {
-        width: 25rem;
-        height: auto;
-    }
-
-    /* Layout adjustments */
-    .row {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .column {
-        flex: 1 1 100%;
+    .footer-iconTop a i {
+        font-size: 2rem;
     }
 }

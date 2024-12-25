@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ABOUT ALEJO.jpg" type="image/jpg">
+    <title>Política de Cookies | Alejandro Bedoya</title>
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: #081b29;
+            --scond-bg-color: #112e42;
+            --text-color: #ededed;
+            --main-color: #00abf0;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow: auto;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /*-- HEADER --*/
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: .3s;
+        }
+
+        .header.sticky {
+            background: var(--bg-color);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--text-color);
+            font-weight: 500;
+            margin-left: 3.5rem;
+            transition: .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--main-color);
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            cursor: pointer;
+            display: none;
+        }
+
+        /*-- CONTENT --*/
+
+        .content {
+            margin-top: 10rem;
+            padding: 4rem 9%;
+        }
+
+        .content h1 {
+            font-size: 3.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .content h2 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .content ul {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            margin-left: 2rem;
+            list-style: disc;
+            margin-bottom: 2rem;
+        }
+        
+        .content ul span {
+            color: var(--main-color);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem 9%;
+            background: var(--scond-bg-color);
+        }
+
+        .footer-text p {
+            font-size: 1.6rem;
+            color: var(--text-color);
+        }
+
+        .footer-links a {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--main-color);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-iconTop a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: .8rem;
+            background: var(--main-color);
+            border: .2rem solid var(--main-color);
+            border-radius: .6rem;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .footer-iconTop a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--scond-bg-color);
+            z-index: -1;
+            transition: .5s;
+        }
+
+        .footer-iconTop a:hover::before {
+            width: 100%;
+        }
+
+        .footer-iconTop a i {
+            font-size: 2.4rem;
+            color: var(--bg-color);
+            transition: .5s;
+        }
+
+        .footer-iconTop a:hover {
+            color: var(--main-color);
+        }
+
+        .content ul a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .content ul a:hover {
+            color: var(--main-color);
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .language-label {
+            font-size: 1.4rem;
+            color: var(--text-color);
+        }
+
+        #language {
+            padding: 0.4rem 0.6rem;
+            font-size: 1.4rem;
+            background: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--main-color);
+            border-radius: 0.4rem;
+            transition: background 0.3s;
+        }
+
+        #language:hover {
+            background: var(--main-color);
+            color: var(--bg-color);
+        }
+
+        /*-- MODO RESPONSIVE --*/
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 5%;
+            }
+
+            .content {
+                padding: 2rem 5%;
+                margin-top: 8rem;
+            }
+
+            .content h1 {
+                font-size: 2.4rem;
+            }
+
+            .content p, .content ul li {
+                font-size: 1.4rem;
+            }
+
+            .content h2 {
+                font-size: 2rem;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 2rem 5%;
+            }
+
+            .footer-text p {
+                font-size: 1.4rem;
+            }
+
+            .footer-links a {
+                font-size: 1.6rem;
+                margin: 0.5rem 0;
+            }
+
+            .footer-iconTop {
+                align-self: center;
+                margin-top: 1rem;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--scond-bg-color);
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 2rem;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .navbar a {
+                font-size: 1.6rem;
+                margin: 1rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 0.5rem 3%;
+            }
+
+            .content {
+                padding: 1rem 3%;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content p, .content ul li {
+                font-size: 1.2rem;
+            }
+
+            .content h2 {
+                font-size: 1.8rem;
+            }
+
+            .footer-text p {
+                font-size: 1.2rem;
+            }
+
+            .footer-links a {
+                font-size: 1.4rem;
+            }
+
+            .footer-iconTop a i {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">Alejandro B.</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="index.html">Sobre Mi</a>
+            <a href="index.html">Educación</a>
+            <a href="index.html">Habilidades</a>
+            <a href="index.html">Contacto</a>
+            <span class="active-nav"></span>
+        </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Política de Cookies</h1>
+        <p>Esta Política de Cookies explica cómo Alejandro Bedoya utiliza cookies y tecnologías similares en su sitio web personal. Al usar este sitio web, usted acepta el uso de cookies de acuerdo con esta política.</p>
+        
+        <h2>¿Qué son las Cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Ayudan a mejorar su experiencia en línea al recordar sus preferencias y permitir funcionalidades esenciales del sitio.</p>
+        
+        <h2>Tipos de Cookies que Utilizamos</h2>
+        <ul>
+            <li><strong>Cookies Esenciales:</strong> Son necesarias para el funcionamiento básico del sitio web.</li>
+            <li><strong>Cookies de Rendimiento:</strong> Recogen información sobre cómo los usuarios utilizan el sitio web, ayudando a mejorar su funcionamiento.</li>
+            <li><strong>Cookies Funcionales:</strong> Permiten que el sitio web recuerde las elecciones que realiza (como el idioma o la región).</li>
+            <li><strong>Cookies de Publicidad:</strong> Se utilizan para personalizar los anuncios que ve en función de sus intereses.</li>
+        </ul>
+
+        <h2>Cómo Controlar las Cookies</h2>
+        <p>Puede controlar el uso de cookies a través de la configuración de su navegador. La mayoría de los navegadores permiten bloquear o eliminar cookies, pero esto puede afectar la funcionalidad de algunas partes de nuestro sitio web.</p>
+
+        <h2>Enlaces a Otros Sitios Web</h2>
+        <p>Este sitio web puede contener enlaces a otros sitios web. No somos responsables de las prácticas de privacidad o el contenido de esos sitios externos.</p>
+
+        <h2>Cambios en la Política de Cookies</h2>
+        <p>Nos reservamos el derecho de modificar esta Política de Cookies en cualquier momento. Le notificaremos cualquier cambio mediante una actualización en esta página.</p>
+
+        <h2>Legislación Colombiana Aplicable</h2>
+        <p>En cumplimiento con la legislación colombiana, le informamos sobre las leyes relevantes para el uso de cookies y protección de datos personales:</p>
+        <ul>
+            <li>Protección de Datos Personales: <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981" style="color: var(--main-color); text-decoration: none;">Ley 1581 de 2012</a></li>
+            <li>Protección de la Información Financiera: <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34488" style="color: var(--main-color); text-decoration: none;">Ley 1266 de 2008</a></li>
+            <li>Ley de Comercio Electrónico: <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=36913" style="color: var(--main-color); text-decoration: none;">Ley 1341 de 2009</a></li>
+        </ul>
+
+        <h2>Contacto</h2>
+        <p>Si tiene alguna pregunta sobre esta Política de Privacidad o desea ejercer sus derechos, puede ponerse en contacto a través de:</p>
+        <ul>
+            <li>Correo Electrónico: <a href="mailto:jalejandrobeoyab@gmial.com" style="color: var(--main-color); text-decoration: none;">jalejandrobeoyab@gmail.com</a></li>
+            <!--<li>Teléfono: <a href="https://wa.me/573118513411" style="color: var(--main-color); text-decoration: none;">+57 3118513411</a></li>-->
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 por Alejandro Bedoya | Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-links">
+            <a href="politica-cookies.html">Política de Cookies</a>
+            <a href="politica-privacidad.html">Política de Privacidad</a>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
