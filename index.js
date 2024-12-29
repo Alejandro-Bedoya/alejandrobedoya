@@ -110,3 +110,35 @@ function changeLanguage() {
     }
     
 }
+
+
+// COPAS DE NIEVE
+const snowContainer = document.getElementById('snow-container');
+
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    snowflake.textContent = '❄'; // Copo de nieve estilo estrella
+
+    // Tamaño aleatorio del copo
+    const size = Math.random() * 20 + 10; // Tamaño entre 10px y 30px
+    snowflake.style.fontSize = `${size}px`;
+
+    // Posición horizontal aleatoria
+    snowflake.style.left = `${Math.random() * 100}vw`;
+
+    // Duración aleatoria de la animación
+    const fallDuration = Math.random() * 5 + 5; // Entre 5s y 10s
+    snowflake.style.animationDuration = `${fallDuration}s`;
+
+    // Agrega el copo al contenedor
+    snowContainer.appendChild(snowflake);
+
+    // Elimina el copo una vez que toca el fondo de la pantalla
+    setTimeout(() => {
+      snowflake.remove();
+    }, fallDuration * 1000);
+}
+
+// Genera un nuevo copo cada 200ms
+setInterval(createSnowflake, 200);

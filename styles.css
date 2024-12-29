@@ -845,3 +845,31 @@ span {
         font-size: 2rem;
     }
 }
+
+/* Contenedor de los copos */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* No interfiere con otros elementos */
+    z-index: 9999; /* Encima de todo */
+}
+  
+/* Estilos de los copos */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Empieza fuera de la pantalla */
+    font-size: 1rem;
+    color: white;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+  
+/* Animación de caída */
+@keyframes fall {
+    to {
+      transform: translateY(100vh); /* Hasta el fondo de la pantalla */
+    }
+}     
