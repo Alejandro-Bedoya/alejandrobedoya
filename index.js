@@ -142,3 +142,45 @@ function createSnowflake() {
 
 // Genera un nuevo copo cada 200ms
 setInterval(createSnowflake, 200);
+
+
+// JUEGOS ARTIFICIALES
+const fireworksContainer = document.getElementById('fireworks-container');
+
+// Genera una explosión en una posición aleatoria
+function createFirework() {
+  const fireworkCount = 30; // Cantidad de partículas por explosión
+  const x = Math.random() * window.innerWidth;
+  const y = Math.random() * window.innerHeight * 0.7; // Hasta el 70% de la pantalla
+
+  for (let i = 0; i < fireworkCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('firework-particle');
+
+    // Posición inicial de la explosión
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+
+    // Generar movimiento en direcciones aleatorias
+    const angle = Math.random() * Math.PI * 2; // Ángulo entre 0 y 2π
+    const distance = Math.random() * 200 + 50; // Distancia entre 50px y 250px
+
+    const dx = Math.cos(angle) * distance;
+    const dy = Math.sin(angle) * distance;
+
+    particle.style.setProperty('--dx', `${dx}px`);
+    particle.style.setProperty('--dy', `${dy}px`);
+
+    // Color aleatorio
+    const hue = Math.floor(Math.random() * 360);
+    particle.style.background = `radial-gradient(circle, hsl(${hue}, 100%, 70%), transparent)`;
+
+    fireworksContainer.appendChild(particle);
+
+    // Elimina la partícula después de la animación
+    setTimeout(() => particle.remove(), 1500);
+  }
+}
+
+// Genera fuegos artificiales aleatorios cada 1.5 segundos
+setInterval(createFirework, 1500);
