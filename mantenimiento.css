@@ -142,8 +142,8 @@ html, body {
     width: 90%;
     padding: 32px;
   }
-  .hologram h1 { font-size: 2rem; }
-  .hologram p  { font-size: 1.05rem; }
+  .hologram h1 { font-size: 1.8rem; }
+  .hologram p  { font-size: 1rem; }
 }
 
 /* Celulares grandes */
