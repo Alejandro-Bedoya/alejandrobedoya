@@ -1,0 +1,145 @@
+/* -------------------------
+   Reset & base
+   ------------------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at center, #000 70%, #020202 100%);
+  color: #bfefff;
+}
+
+/* Canvas del espacio (fondo) */
+#space {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;            /* atrás */
+  pointer-events: none;  /* no bloquea el mouse */
+  background: transparent;
+}
+
+/* Contenedor que mantiene la pantalla holográfica encima del canvas */
+.holo-container {
+  position: relative;
+  z-index: 1;            /* encima del canvas */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  pointer-events: auto;
+}
+
+/* -------------------------
+   Pantalla holográfica
+   ------------------------- */
+.hologram {
+  position: relative;
+  width: 680px;
+  max-width: 92%;
+  padding: 40px 48px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(0, 255, 255, 0.06);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  color: #b3ffff;
+  text-shadow: 0 0 10px cyan, 0 0 25px #0ff;
+  transform: rotateX(15deg);
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.15),
+    0 0 60px rgba(0, 255, 255, 0.08),
+    inset 0 0 30px rgba(0, 255, 255, 0.04);
+  animation: flicker 3s infinite alternate, floaty 6s ease-in-out infinite;
+  overflow: hidden;
+  transition: transform 120ms ease-out;
+  border: 1px solid rgba(180, 255, 255, 0.06);
+}
+
+/* Líneas de escaneo tipo holograma */
+.hologram::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,255,0.06) 0px,
+    rgba(0,255,255,0.03) 2px,
+    transparent 4px
+  );
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Ráfaga de brillo que cruza la pantalla */
+.hologram::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0.05) 50%, transparent 55%);
+  transform: rotate(25deg);
+  animation: shine 6s linear infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: blur(6px);
+  opacity: 0.9;
+}
+
+/* -------------------------
+   Tipografía y textos
+   ------------------------- */
+.hologram h1 {
+  font-size: 2.2rem;
+  margin: 0 0 12px 0;
+  color: #d8ffff;
+  letter-spacing: 0.6px;
+}
+
+.hologram p {
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.65;
+  color: #e6fbff;
+}
+
+/* -------------------------
+   Animaciones
+   ------------------------- */
+@keyframes scan {
+  from { background-position: 0 -200px; }
+  to   { background-position: 0 200px; }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.62; }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: rotateX(15deg) translateY(0px); }
+  50%     { transform: rotateX(15deg) translateY(-10px); }
+}
+
+/* Responsive: textos en pantallas pequeñas */
+@media (max-width: 520px) {
+  .hologram {
+    padding: 28px;
+    width: calc(100% - 40px);
+  }
+  .hologram h1 { font-size: 1.6rem; }
+  .hologram p  { font-size: 1rem; }
+}
