@@ -199,7 +199,7 @@ body {
   min-height: 680px;
   border-radius: 34px;
   overflow: hidden;
-  background: url('/IMAGENES/ABOUT.png')
+  background: url('ABOUT.png')
     center center / cover no-repeat;
 }
 
