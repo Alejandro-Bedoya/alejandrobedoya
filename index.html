@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+            <!-- Logo y botón pequeño -->
+            <div class="mobile-brand">
+            <a href="index.html" class="logo">Alejo B.</a>
+
+            <!-- Botón móvil con texto -->
+            <a href="#" class="mobile-download">
+                Alejo
+            </a>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="navbar" id="navbar">
+            <a href="#hero">Inicio</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#services">Servicios</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#actual">Actual</a>
+            <a href="#contact">Contacto</a>
+            </nav>
+
+            <!-- Botones escritorio -->
+            <div class="header-actions">
+            <a href="#" class="btn btn-outline">
+                Premios (Próximamente)
+            </a>
+            <a href="#" class="btn btn-primary">
+                Jugar (Pronto)
+            </a>
+            </div>
+
+            <!-- Menú hamburguesa -->
+            <button class="menu-toggle" id="menu-toggle">
+            <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </header>
+
+  <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+        <div class="hero-image">
+        <!-- Overlay oscuro -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido -->
+        <div class="hero-content">
+            <h1>
+            Diseños<br />
+            web<br />
+            modernos
+            </h1>
+
+            <p>
+            Desarrollo sitios web profesionales, rápidos y totalmente
+            responsivos para cualquier dispositivo.
+            </p>
+
+            <a href="#contact" class="btn btn-primary hero-btn">
+            Contactarme <i class="bx bx-user"></i>
+            </a>
+        </div>
+        </div>
+    </section>
+
+  <!-- ================= SOBRE MÍ ================= -->
+    <section class="about" id="about">
+        <div class="container about-container">
+
+            <!-- Imagen -->
+            <div class="about-image">
+            <img
+                src="/IMAGENES/MIO.png"
+                alt="Foto de perfil"
+            />
+            </div>
+
+            <!-- Contenido -->
+            <div class="about-content">
+            <span class="section-subtitle">Sobre mí</span>
+
+            <h2>
+                Diseñador y desarrollador
+                <span>web profesional</span>
+            </h2>
+
+            <p>
+                Soy un desarrollador web apasionado por crear sitios modernos,
+                rápidos y totalmente responsivos. Me especializo en diseño UI/UX,
+                desarrollo frontend y soluciones digitales que ayudan a las marcas
+                a destacar en internet.
+            </p>
+
+            <!-- Estadísticas -->
+            <div class="about-stats">
+                <div class="stat-box">
+                <h3>3+</h3>
+                <span>Años de experiencia</span>
+                </div>
+
+                <div class="stat-box">
+                <h3>25+</h3>
+                <span>Proyectos realizados</span>
+                </div>
+
+                <div class="stat-box">
+                <h3>100%</h3>
+                <span>Clientes satisfechos</span>
+                </div>
+            </div>
+
+            <!-- Habilidades con iconos -->
+            <div class="skills">
+                <i class='bx bxl-html5' title="HTML5"></i>
+                <i class='bx bxl-css3' title="CSS3"></i>
+                <i class='bx bxl-javascript' title="JavaScript"></i>
+                <i class='bx bxl-react' title="React"></i>
+                <i class='bx bxl-git' title="Git"></i>
+                <i class='bx bxl-github' title="GitHub"></i>
+            </div>
+
+            <!-- Botones -->
+            <div class="about-buttons">
+                <a href="" class="btn btn-primary">
+                Descargar CV <i class='bx bx-download'></i>
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                Contactarme <i class="bx bx-user"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- ================= PROYECTOS ================= -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="projects-header">
+            <span class="section-subtitle">Proyectos</span>
+            <h2>Trabajos destacados</h2>
+            <p>
+                Algunos de los proyectos que he desarrollado con diseño moderno,
+                rendimiento optimizado y experiencia de usuario profesional.
+            </p>
+            </div>
+
+            <!-- Grid de proyectos -->
+            <div class="projects-grid">
+
+            <!-- Proyecto 1 -->
+            <article class="project-card">
+                <div class="project-image">
+                <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                    alt="Proyecto E-commerce"
+                />
+                </div>
+
+                <div class="project-content">
+                <h3>Tienda Online Premium</h3>
+
+                <p>
+                    Plataforma e-commerce moderna con carrito de compras, pasarela
+                    de pagos y diseño completamente responsive.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <!--<div class="project-buttons">
+                    <a href="#" class="btn btn-primary">
+                    Ver Demo <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                    Código <i class='bx bxl-github'></i>
+                    </a>
+                </div>-->
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project-card">
+                <div class="project-image">
+                <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                    alt="Dashboard"
+                />
+                </div>
+
+                <div class="project-content">
+                <h3>Dashboard Analítico</h3>
+
+                <p>
+                    Panel administrativo con gráficos, métricas en tiempo real y
+                    una interfaz intuitiva para la gestión empresarial.
+                </p>
+
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>CSS</span>
+                    <span>API</span>
+                </div>
+
+                <!--<div class="project-buttons">
+                    <a href="#" class="btn btn-primary">
+                    Ver Demo <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                    Código <i class='bx bxl-github'></i>
+                    </a>
+                </div>-->
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project-card">
+                <div class="project-image">
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                    alt="Portafolio"
+                />
+                </div>
+
+                <div class="project-content">
+                <h3>Portafolio Creativo</h3>
+
+                <p>
+                    Sitio personal con animaciones, secciones dinámicas y una
+                    experiencia visual elegante y profesional.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>SCSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <!--<div class="project-buttons">
+                    <a href="#" class="btn btn-primary">
+                    Ver Demo <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                    Código <i class='bx bxl-github'></i>
+                    </a>
+                </div>-->
+                </div>
+            </article>
+
+            </div>
+        </div>
+    </section>
+
+  <!-- ================= SERVICIOS ================= -->
+    <section class="services" id="services">
+        <div class="container services-wrapper">
+
+            <!-- Texto lateral -->
+            <div class="services-intro">
+            <span class="section-subtitle">Servicios</span>
+
+            <h2>
+                Soluciones digitales
+                <span>que impulsan tu marca</span>
+            </h2>
+
+            <p>
+                Ofrezco servicios de desarrollo y diseño web enfocados en crear
+                experiencias modernas, atractivas y orientadas a resultados para
+                llevar tu negocio al siguiente nivel.
+            </p>
+            </div>
+
+            <!-- Tarjetas -->
+            <div class="services-cards">
+
+            <article class="service-card featured">
+                <div class="service-icon">
+                <i class='bx bx-desktop'></i>
+                </div>
+
+                <h3>Diseño Web Profesional</h3>
+
+                <p>
+                Diseños modernos, elegantes y totalmente responsive que reflejan
+                la identidad de tu marca y mejoran la experiencia del usuario.
+                </p>
+
+                <a href="#" class="service-link">
+                Ver más
+                <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                <i class='bx bx-code-alt'></i>
+                </div>
+
+                <h3>Desarrollo a Medida</h3>
+
+                <p>
+                Sitios web y aplicaciones personalizadas con tecnologías modernas,
+                alto rendimiento y código limpio.
+                </p>
+
+                <a href="#" class="service-link">
+                Ver más
+                <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                <i class='bx bx-cart-alt'></i>
+                </div>
+
+                <h3>Tiendas Online</h3>
+
+                <p>
+                E-commerce completos con carrito de compras, pagos seguros y
+                panel de administración.
+                </p>
+
+                <a href="#" class="service-link">
+                Ver más
+                <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                <i class='bx bx-line-chart'></i>
+                </div>
+
+                <h3>SEO y Optimización</h3>
+
+                <p>
+                Mejora tu posicionamiento en Google y aumenta la visibilidad
+                de tu negocio en internet.
+                </p>
+
+                <a href="#" class="service-link">
+                Ver más
+                <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                <i class="bx bx-recycle"></i>
+                </div>
+
+                <h3>Auditoria Ambiental en Salud</h3>
+
+                <p>
+                Realizo la Auditoría Ambiental en Salud como un proceso de evaluación para verificar el 
+                cumplimiento de las condiciones ambientales en instituciones del sector salud. Identifico 
+                riesgos, oportunidades de mejora y el cumplimiento de la normativa ambiental vigente aplicable. 
+                Con este servicio contribuyo a fortalecer entornos seguros, sostenibles y adecuados para pacientes, 
+                personal y visitantes.
+
+                </p>
+
+                <a href="#" class="service-link">
+                Ver más
+                <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </article>
+
+            </div>
+        </div>
+    </section>
+
+  <!-- ================= HABILIDADES AVANZADAS ================= -->
+    <section class="skills" id="skills">
+        <div class="container skills-wrapper">
+
+            <!-- Columna izquierda -->
+            <div class="skills-intro">
+            <span class="section-subtitle">Habilidades</span>
+
+            <h2>
+                Dominio técnico
+                <span>y creatividad digital</span>
+            </h2>
+
+            <p>
+                Combino diseño, programación y estrategia para desarrollar
+                experiencias web modernas, rápidas y visualmente impactantes.
+            </p>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="skills-grid">
+
+            <article class="skill-card">
+                <div class="skill-header">
+                <div class="skill-icon">
+                    <i class='bx bxl-html5'></i>
+                </div>
+                <span class="skill-percent">98%</span>
+                </div>
+
+                <h3>HTML5</h3>
+                <p>Estructuras semánticas y optimizadas para SEO.</p>
+
+                <div class="skill-line">
+                <div class="skill-fill" style="width: 98%;"></div>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-header">
+                <div class="skill-icon">
+                    <i class='bx bxl-css3'></i>
+                </div>
+                <span class="skill-percent">96%</span>
+                </div>
+
+                <h3>CSS3</h3>
+                <p>Diseños premium, animaciones y responsive design.</p>
+
+                <div class="skill-line">
+                <div class="skill-fill" style="width: 96%;"></div>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-header">
+                <div class="skill-icon">
+                    <i class='bx bxl-javascript'></i>
+                </div>
+                <span class="skill-percent">92%</span>
+                </div>
+
+                <h3>JavaScript</h3>
+                <p>Interactividad avanzada y lógica dinámica.</p>
+
+                <div class="skill-line">
+                <div class="skill-fill" style="width: 92%;"></div>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-header">
+                <div class="skill-icon">
+                    <i class='bx bxl-react'></i>
+                </div>
+                <span class="skill-percent">88%</span>
+                </div>
+
+                <h3>React</h3>
+                <p>Interfaces modernas y componentes reutilizables.</p>
+
+                <div class="skill-line">
+                <div class="skill-fill" style="width: 88%;"></div>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-header">
+                <div class="skill-icon">
+                    <i class='bx bxs-data'></i>
+                </div>
+                <span class="skill-percent">85%</span>
+                </div>
+
+                <h3>MySQL</h3>
+                <p>Bases de datos robustas y optimizadas.</p>
+
+                <div class="skill-line">
+                <div class="skill-fill" style="width: 85%;"></div>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-header">
+                <div class="skill-icon">
+                    <i class='bx bx-search-alt'></i>
+                </div>
+                <span class="skill-percent">90%</span>
+                </div>
+
+                <h3>SEO</h3>
+                <p>Posicionamiento y visibilidad en Google.</p>
+
+                <div class="skill-line">
+                <div class="skill-fill" style="width: 90%;"></div>
+                </div>
+            </article>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- ================= SIG ================= -->
+    <section class="about" id="about">
+        <div class="container about-wrapper">
+
+            <!-- Imagen -->
+            <div class="about-image">
+            <img src="/IMAGENES/SIG.png" alt="Alejo Bedoya">
+
+            <!-- Badge flotante -->
+            <div class="about-badge">
+                <i class='bx bx-shield-quarter'></i>
+                <span>Sistema Integrado de Gestión</span>
+            </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="about-content">
+            <span class="section-subtitle">SIG - AMBIENTAL</span>
+
+            <h2>
+                Transformo procesos
+                <span>en resultados medibles</span>
+            </h2>
+
+            <p>
+                Actualmente me desempeño en el área de <strong>Sistema Integrado de Gestión</strong>,
+                auditorías internas, seguimiento a indicadores de calidad y
+                gestión ambiental en una IPS especializada en imágenes diagnósticas.
+            </p>
+
+            <p>
+                Mi trabajo se enfoca en garantizar el cumplimiento normativo,
+                fortalecer la mejora continua y los procesos
+                organizacionales para elevar los estándares de calidad y sostenibilidad.
+            </p>
+
+            <!-- Estadísticas -->
+            <div class="about-stats">
+                <div class="about-stat">
+                <h3>Resolución</h3>
+                <span>591 de 2024</span>
+                </div>
+
+                <div class="about-stat">
+                <h3>Planes</h3>
+                <span>Auditoría y mejora</span>
+                </div>
+
+                <div class="about-stat">
+                <h3>Capacitaciones</h3>
+                <span>Empresarial</span>
+                </div>
+            </div>
+
+            <!-- Enlace -->
+            <a href="#contact" class="about-link">
+                Conocer más
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- ================= PROGRAMACION Y CIBERSEGURIDAD ================= -->
+    <section class="about" id="actual">
+        <div class="container about-wrapper">
+
+            <!-- Imagen -->
+            <div class="about-image">
+            <img src="/IMAGENES/PROGRAMACION.jpg" alt="Alejo Bedoya">
+
+            <!-- Badge flotante -->
+            <div class="about-badge">
+                <i class='bx bx-shield-quarter'></i>
+                <span>Programación y Ciberseguridad</span>
+            </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="about-content">
+            <span class="section-subtitle">PROGRAMACIÓN Y CIBERSEGURIDAD</span>
+
+            <h2>
+                Transformo sistemas
+                <span>en soluciones seguras y escalables</span>
+            </h2>
+
+            <p>
+                Actualmente me desempeño en <strong>ciberseguridad y desarrollo de software</strong>,
+                participando en la implementación de soluciones tecnológicas, análisis de vulnerabilidades y desarrollo de aplicaciones web.
+            </p>
+
+            <p>
+                Mi trabajo se enfoca en proteger la integridad de los sistemas, fortalecer la seguridad digital
+                y optimizar el rendimiento de las aplicaciones mediante buenas prácticas de programación y seguridad informática.
+            </p>
+
+            <!-- Estadísticas -->
+            <div class="about-stats">
+                <div class="about-stat">
+                <h3>Cyber</h3>
+                <span>Seguridad informática</span>
+                </div>
+
+                <div class="about-stat">
+                <h3>Dev</h3>
+                <span>Desarrollo web</span>
+                </div>
+
+                <div class="about-stat">
+                <h3>Code</h3>
+                <span>Arquitectura de software</span>
+                </div>
+            </div>
+
+            <!-- Enlace -->
+            <a href="#contact" class="about-link">
+                Conocer más
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="contact" id="contact">
+        <div class="container contact-wrapper">
+
+            <!-- Información de contacto -->
+            <div class="contact-info">
+            <span class="section-subtitle">Contacto</span>
+
+            <h2>
+                Hablemos sobre
+                <span>tu próximo proyecto</span>
+            </h2>
+
+            <p>
+                ¿Tienes una idea en mente? Estoy disponible para desarrollar
+                sitios web modernos, sistemas personalizados y soluciones
+                digitales de alto impacto.
+            </p>
+
+            <div class="contact-items">
+
+                <!-- Correo -->
+                <div class="contact-item">
+                <i class='bx bx-envelope'></i>
+                <div>
+                    <span>Correo electrónico</span>
+                    <a href="mailto:jalejandrobedoyab@gmail.com">Contactarme por Correo</a>
+                </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-item">
+                <i class='bx bxl-whatsapp'></i>
+                <div>
+                    <span>WhatsApp</span>
+                    <a
+                    href="https://wa.me/573118513411?text=Hola%20Alejo,%20quiero%20solicitar%20información%20sobre%20tus%20servicios."
+                    target="_blank"
+                    >
+                    Contactarme por WhatsApp
+                    </a>
+                </div>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="contact-item">
+                <i class='bx bx-map'></i>
+                <div>
+                    <span>Ubicación</span>
+                    <p>Colombia</p>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="contact-form-box">
+
+            <form class="contact-form"
+                action="mailto:tucorreo@gmail.com"
+                method="POST"
+                enctype="text/plain"
+            >
+
+                <!-- Nombre -->
+                <div class="form-group">
+                <input
+                    type="text"
+                    name="Nombre"
+                    placeholder="Tu nombre completo"
+                    required
+                    minlength="3"
+                    maxlength="50"
+                    autocomplete="name"
+                >
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group">
+                <input
+                    type="email"
+                    name="Correo"
+                    placeholder="Tu correo electrónico"
+                    required
+                    autocomplete="email"
+                >
+                </div>
+
+                <!-- Asunto -->
+                <div class="form-group">
+                <input
+                    type="text"
+                    name="Asunto"
+                    placeholder="Asunto"
+                    required
+                    minlength="5"
+                    maxlength="80"
+                >
+                </div>
+
+                <!-- Mensaje -->
+                <div class="form-group">
+                <textarea
+                    name="Mensaje"
+                    rows="6"
+                    placeholder="Escribe tu mensaje..."
+                    required
+                    minlength="10"
+                    maxlength="500"
+                ></textarea>
+                </div>
+
+                <!-- Políticas -->
+                <div class="form-policy">
+                <label class="policy-checkbox">
+                    <input type="checkbox" required>
+
+                    <span>
+                    Acepto la
+                    <a href="/FRONTEND/INTERES/politica.html" target="_blank">
+                        Política de Privacidad
+                    </a>
+                    y el
+                    <a href="/FRONTEND/INTERES/tyc.html" target="_blank">
+                        Términos y Condiciones
+                    </a>.
+                    </span>
+                </label>
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="contact-btn">
+                Enviar mensaje
+                <i class='bx bx-send'></i>
+                </button>
+
+            </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-wrapper">
+
+            <!-- Marca -->
+            <div class="footer-brand">
+            <h3>Alejo Bedoya</h3>
+            <p>
+                Desarrollador web enfocado en crear experiencias digitales modernas,
+                funcionales y de alto impacto.
+            </p>
+
+            <div class="footer-social">
+                <a href="https://wa.me/573118513411" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="mailto:jalejandrobedoyab@gmail.com"><i class='bx bx-envelope'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div class="footer-links">
+            <h4>Enlaces</h4>
+            <a href="/FRONTEND/index.html#hero">Inicio</a>
+            <a href="/FRONTEND/index.html#about">Sobre mí</a>
+            <a href="/FRONTEND/index.html#projects">Proyectos</a>
+            <a href="/FRONTEND/index.html#services">Servicios</a>
+            <a href="/FRONTEND/index.html#skills">Habilidades</a>
+            <a href="/FRONTEND/index.html#actual">Actual</a>
+            <a href="/FRONTEND/index.html#contact">Contacto</a>
+            </div>
+
+            <!-- DE INTERES -->
+            <div class="footer-links">
+            <h4>De interes</h4>
+            <a href="/FRONTEND/INTERES/politica.html">Política de privacidad</a>
+            <a href="/FRONTEND/INTERES/tyc.html">Términos y condiciones</a>
+            <a href="/FRONTEND/INTERES/usoservicios.html">Uso de servicio</a>
+            <a href="/FRONTEND/INTERES/cookies.html">Política de cookies</a>
+            </div>
+
+            <!-- Contacto rápido -->
+            <div class="footer-contact">
+            <h4>Contacto</h4>
+            <p><i class='bx bx-map'></i> Colombia</p>
+            <!--<p><i class='bx bx-phone'></i> +57 311 851 3411</p>-->
+            <p><i class='bx bx-envelope'></i> jalejandrobedoyab@gmail.com</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>
+            © 2026 Alejandro Bedoya. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
