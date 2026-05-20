@@ -199,8 +199,8 @@ body {
   min-height: 680px;
   border-radius: 34px;
   overflow: hidden;
-  background: url('ABOUT.png')
-    center center / cover no-repeat;
+  background: url('about.png')
+  center center / cover no-repeat;
 }
 
 .hero-overlay {
