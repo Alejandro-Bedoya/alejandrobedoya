@@ -3520,13 +3520,13 @@
         if (!toast || !toastMessage) return;
         toastMessage.textContent = text;
         toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 4000);
+        setTimeout(() => toast.classList.remove('show'), 4500);
       }
 
       if (contactForm) {
         const submitBtn = contactForm.querySelector('.contact-btn');
 
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
           e.preventDefault();
 
           if (!contactForm.checkValidity()) {
@@ -3539,26 +3539,37 @@
           const servicio = contactForm.querySelector('[name="Servicio"]').value;
           const mensaje = contactForm.querySelector('[name="Mensaje"]').value.trim();
 
-          const destino = 'jalejandrobedoyab@gmail.com';
-          const asunto = `Consulta Web (${servicio}) - ${nombre}`;
-          const cuerpo =
-`Hola Alejandro,
+          try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                access_key: '8b90df6a-7f99-4995-9d0d-b6375671db31',
+                subject: `Consulta Web (${servicio}) - ${nombre}`,
+                from_name: 'Portafolio Alejandro Bedoya',
+                Nombre: nombre,
+                Correo: correo,
+                Servicio: servicio,
+                Mensaje: mensaje
+              })
+            });
 
-Me contacto desde tu portafolio web con los siguientes datos:
+            const result = await response.json();
 
-• Nombre: ${nombre}
-• Correo: ${correo}
-• Área de interés: ${servicio}
-
-Mensaje:
-${mensaje}`;
-
-          const mailtoLink = `mailto:${destino}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-
-          runFillAndCheckAnimation(submitBtn, () => {
-            showToast(`¡Listo, ${nombre}! Abriendo tu correo para enviar la consulta...`);
-            window.location.href = mailtoLink;
-          });
+            if (result.success) {
+              runFillAndCheckAnimation(submitBtn, () => {
+                showToast(`¡Mensaje enviado, ${nombre}! Te responderé pronto.`);
+                contactForm.reset();
+              });
+            } else {
+              showToast('No se pudo enviar el mensaje. Intenta nuevamente.');
+            }
+          } catch (error) {
+            showToast('Error de conexión al enviar el formulario.');
+          }
         });
       }
 
